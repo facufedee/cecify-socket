@@ -24,7 +24,7 @@ const CORS_ORIGINS = (process.env.CORS_ORIGIN || 'http://localhost:3000')
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 // Eventos que la app puede emitir a un usuario
-const ALLOWED_EVENTS = new Set(['message:new', 'match:created', 'photo:liked', 'messages:read'])
+const ALLOWED_EVENTS = new Set(['message:new', 'match:created', 'photo:liked', 'photo:commented', 'story:replied', 'messages:read'])
 
 const app = express()
 const httpServer = createServer(app)
